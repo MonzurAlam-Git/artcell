@@ -1,0 +1,23 @@
+[
+    {
+        "id":1,
+        "name": "অন্যসময়" ,
+        "description" : "Onno Shomoy is the debut album released by the Bangladeshi metal band Artcell in 2002 from G-Series. This album was highly appreciated by heavy metal listeners. This album helped to develop progressive metal music in Bangladesh.This album was dedicated to Rupok, who wrote many lyrics for Artcell" ,
+        "price" : "150",
+        "img" : "https://i.ibb.co/2vxFyyX/album1.jpg"
+    },
+    {
+        "id":2,
+        "name": "অনিকেত প্রান্তর" ,
+        "description" : "Oniket Prantor is the second album released by the Bangladeshi metal band Artcell in 2007 from G-Series. This album was highly appreciated by heavy metal listeners. This album helped to develop progressive metal music in Bangladesh.This album was dedicated to Rupok, who wrote many lyrics for Artcell." ,
+        "price" : "150",
+        "img": "https://i.ibb.co/RBRhz20/album2.jpg"
+    },
+    {
+        "id":3,
+        "name": "Otriteeyo" ,
+        "description" : "Artcell worked on their third album in 2013. played in Rocknation Overload on 19 April 2014 after a break of around two years.In 2016, Artcell released their new music video Obimrishshota from their third album Otriteeyo with the original band lineup. After almost 10 years their new song had been released" ,
+        "price" : "150",
+        "img": "https://i.ibb.co/f1mFJs6/otrityo.jpg"
+    }
+]

@@ -1,0 +1,30 @@
+[
+    {
+        "id":1,
+        "name": "George Lincoln D'Costa",
+        "position" :"Riff guitarist and Vocal",
+        "description":"George Lincoln D'costa is one of the four founders of the iconic band “Artcell”. He has been in the music industry since the very start of Artcell which was in 1999.",
+        "img" : "https://i.ibb.co/HBfn7mR/lincoln.png"
+    },
+    {
+        "id":2,
+        "name": "Ershad Zaman",
+        "position" :"Lead guitarist and Vocal",
+        "description":"Ershad Zaman is one of the four founders of the iconic band “Artcell”. He has been in the music industry since the very start of Artcell which was in 1999.",
+        "img" : "https://i.ibb.co/DLwqpFz/ershad.jpg"
+    },
+    {
+        "id":3,
+        "name": "Saef Al Nazi Cézanne",
+        "position" :"Bassist",
+        "description":"Saef Al Nazi Cézanne is one of the four founders of the iconic band “Artcell”. He has been in the music industry since the very start of Artcell which was in 1999.",
+        "img" : "https://i.ibb.co/z2jtKY9/cezanne.jpg"
+    },
+    {
+        "id":4,
+        "name": "Kazi Shazzadul Asheqeen Shaju",
+        "position" :"Drummer",
+        "description":"Kazi Shazzadul Asheqeen Shaju is one of the four founders of the iconic band “Artcell”. He has been in the music industry since the very start of Artcell which was in 1999.",
+        "img" : "https://i.ibb.co/z6Xr07N/sjahu-Bhai.jpg"
+    }
+]
