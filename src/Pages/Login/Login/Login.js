@@ -4,7 +4,11 @@ import { Button, Form } from 'react-bootstrap';
 import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { Link } from 'react-router-dom';
 import auth from '../../../firebase.init';
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
+import Loading from '../../Loading/Loading';
+import SocialLogin from '../SocialLogin/SocialLogin';
+import { sendPasswordResetEmail } from 'firebase/auth';
+
 
 
 
@@ -19,6 +23,15 @@ const Login = () => {
         loading,
         error,
     ] = useSignInWithEmailAndPassword(auth);
+
+    let location = useLocation();
+    let from = location.state?.from?.pathname || "/";
+
+
+    if (user) {
+        navigate(from, { replace: true });
+    }
+
 
     const handleLogin = (event) => {
         event.preventDefault();
@@ -47,8 +60,19 @@ const Login = () => {
                 </Button>
             </Form>
             <p className='text-center mt-3 fw-semibold
-            '>New with us? Then Click on the <Link className='text-decoration-none text-danger fw-bold  ' to="/register"> Register </Link> </p>
+            '>New with us? Then Click on the <Link className='text-decoration-none text-danger fw-bold' to="/register"> Register </Link> </p>
+
+            {/* <p className='text-center mt-3 fw-semibold
+            '> Forget Password ? Dont Worry! Simply Click on <Button onClick={async () => {
+                    const email = emailRef.current.value;
+                    await sendPasswordResetEmail(email);
+                    alert('Sent email');
+                }} className='text-decoration-none text-danger fw-bold'> Reset Password </Button> </p> */}
+            <p className='text-center mt-3 fw-semibold
+            '> Forget Password ? Dont Worry! Simply Click on <Link to="/resetPassword" className='text-decoration-none text-danger fw-bold'> Reset Password </Link> </p>
+            <SocialLogin></SocialLogin>
         </div>
+
     );
 };
 
