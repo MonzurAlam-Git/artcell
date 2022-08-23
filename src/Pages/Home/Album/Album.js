@@ -19,21 +19,27 @@ const Album = ({ album }) => {
 
     return (
         <div className='container '>
-            <Row sm={12} md={12}>
-                <Col  >
-                    <Card className='mt-5 w-75 ' >
-                        <Card.Img variant="top" src={img} />
-                        <Card.Body>
-                            <Card.Title className='fw-bold'>{name}</Card.Title>
-                            <Card.Text>
-                                {description}
-                            </Card.Text>
-                            <Card.Footer className='fw-bold'> Price : {price} BDT</Card.Footer>
-                            <Button onClick={() => handleBuy()} className='w-50 fw-bold bg-opacity-75' variant="danger">Buy</Button>
-                        </Card.Body>
-                    </Card>
-                </Col>
-            </Row>
+
+            <Card className='mt-5 w-75 ' >
+                <Card.Img variant="top" src={img} />
+                <Card.Body>
+                    <Card.Title className='fw-bold'>{name}</Card.Title>
+                    <Card.Text>
+                        {description}
+                    </Card.Text>
+                    <Card.Footer className='fw-bold'> Price : {price} BDT</Card.Footer>
+                    <Button onClick={() => handleBuy()} className='w-50 fw-bold bg-opacity-75' variant="danger">Buy</Button>
+                </Card.Body>
+            </Card>
+
+
+
+
+
+
+
+
+
 
 
         </div>

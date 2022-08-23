@@ -1,5 +1,6 @@
 import './App.css';
 import Home from "../src/Pages/Home/Home/Home"
+import React from 'react';
 
 import Footer from './Pages/Footer/Footer';
 import Header from './Pages/Header/Header';

@@ -5,19 +5,20 @@ import Form from 'react-bootstrap/Form';
 import { useSendPasswordResetEmail } from 'react-firebase-hooks/auth';
 import auth from '../../../firebase.init';
 
+
+
 const ResetPassword = () => {
     const emailRef = useRef("");
     const [sendPasswordResetEmail, sending, error] = useSendPasswordResetEmail(auth);
-
 
     const handleResetPassword = async () => {
         const email = emailRef.current.value;
         if (email) {
             await sendPasswordResetEmail(email);
-            alert("Sent email");
+            alert("email sent");
+
         } else {
-            alert("PLease enter your email"
-            );
+            alert("PLease enter your email");
         }
     }
     return (
@@ -32,7 +33,9 @@ const ResetPassword = () => {
                 <Button className='btn btn-primary w-50  d-block mx-auto fw-bold' variant="primary" type="submit">
                     Reset Password
                 </Button>
+
             </Form>
+
         </div>
     );
 };

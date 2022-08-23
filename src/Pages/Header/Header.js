@@ -15,7 +15,7 @@ const Header = () => {
 
     return (
         <div >
-            <Navbar bg="dark" sticky="top">
+            <Navbar bg="dark" expand="lg" sticky="top">
 
                 <Container>
                     <Navbar.Brand as={Link} to="/home"><img src={logo} height="80" alt="" /></Navbar.Brand>
@@ -23,7 +23,6 @@ const Header = () => {
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="ms-auto">
                             <Nav.Link href="/home" className='text-white fw-bold'>Home</Nav.Link>
-
                             <Nav.Link href="home#albums" className='text-white fw-bold'>Albums</Nav.Link>
                             <Nav.Link href="#members" className='text-white fw-bold'>Members</Nav.Link>
                             <Nav.Link href="/blogs" className='text-white fw-bold'>Blogs</Nav.Link>
@@ -33,6 +32,7 @@ const Header = () => {
                     </Navbar.Collapse>
                 </Container>
             </Navbar>
+
         </div>
     );
 };

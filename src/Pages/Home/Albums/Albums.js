@@ -3,6 +3,8 @@ import { useState } from 'react';
 import { useEffect } from 'react';
 import Album from '../Album/Album';
 import "./albums.css"
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 
 const Albums = () => {
     const [albums, setAlbums] = useState([]);
@@ -17,10 +19,18 @@ const Albums = () => {
 
     return (
         <div id='albums' className='mt-2 d-flex container '>
+            <Row >
+                {
+                    albums.map((album) => (
+                        <Col sm={12} md={4}>
+                            <Album key={album.id} album={album}></Album>
+                        </Col>
+                    )
+                    )
+                }
+            </Row>
 
-            {
-                albums.map((album) => (<Album key={album.id} album={album}></Album>))
-            }
+
         </div >
     );
 };

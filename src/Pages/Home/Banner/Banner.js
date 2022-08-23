@@ -8,7 +8,7 @@ import banner_3 from "../../../images/live_3.jpg"
 const Banner = () => {
     return (
         <div>
-            <Carousel fade>
+            <Carousel fade md={12} sm={12}>
                 <Carousel.Item>
                     <img
                         className="d-block w-100"

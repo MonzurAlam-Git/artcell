@@ -10,8 +10,6 @@ import SocialLogin from '../SocialLogin/SocialLogin';
 import { sendPasswordResetEmail } from 'firebase/auth';
 
 
-
-
 const Login = () => {
     const emailRef = useRef("");
     const passRef = useRef("");
@@ -26,11 +24,16 @@ const Login = () => {
 
     let location = useLocation();
     let from = location.state?.from?.pathname || "/";
-
+    let errorMsg;
 
     if (user) {
         navigate(from, { replace: true });
     }
+
+    if (error) {
+        errorMsg = <p className='text-danger fw-bold text-center bg-danger text-white w-75 mx-auto'>Error: {error?.message} </p>
+    }
+
 
 
     const handleLogin = (event) => {
@@ -58,6 +61,7 @@ const Login = () => {
                 <Button className='mx-auto w-100' variant="danger" type="submit">
                     Submit
                 </Button>
+
             </Form>
             <p className='text-center mt-3 fw-semibold
             '>New with us? Then Click on the <Link className='text-decoration-none text-danger fw-bold' to="/register"> Register </Link> </p>
@@ -71,6 +75,7 @@ const Login = () => {
             <p className='text-center mt-3 fw-semibold
             '> Forget Password ? Dont Worry! Simply Click on <Link to="/resetPassword" className='text-decoration-none text-danger fw-bold'> Reset Password </Link> </p>
             <SocialLogin></SocialLogin>
+            {errorMsg}
         </div>
 
     );
